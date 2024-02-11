@@ -44,14 +44,14 @@ public class {class}Controller : Controller
 	    	{next_value}
 	    	{class} {class_name} = new {class}({constructor_parameters});
 	    	{class_name}.Insert(connection);
-	    	return RedirectToAction("Index", "{class}");
 	    }catch (Exception ex){
 	    	
 	    }
+	    return RedirectToAction("Index", "{class}");
     }
     
     public IActionResult Delete()
     {
-    
+        return RedirectToAction("Index");
     }
 }

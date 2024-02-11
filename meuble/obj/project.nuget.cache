@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aPLiOl0kGTPoPKWfxYnDFdQ0JIezeN8yzMdjDKsVH89SvbGZ2a/J5yWHCMaLC+49HnmMrhK6v5Pf/2bp3XxzCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mano-\\Documents\\GitHub\\AspNetGenerator\\meuble\\meuble.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mano-\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Mano-\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Mano-\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
