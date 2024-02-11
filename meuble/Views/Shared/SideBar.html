@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" href="./SideBar.css">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<div class="nav-side-menu">
+    <div class="brand">PROJECT</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+                <li data-toggle="collapse" data-target="#materiel" class="collapsed">
+	<a href="#"> Materiel <span class="arrow"></span></a>
+</li>
+<ul class="sub-menu collapse" id="materiel">
+	<li><a href="ViewMateriel.jsp">View</a></li>
+	<li><a href="InsertMateriel.jsp">Insert</a></li>
+</ul>
+
+<li data-toggle="collapse" data-target="#client" class="collapsed">
+	<a href="#"> Client <span class="arrow"></span></a>
+</li>
+<ul class="sub-menu collapse" id="client">
+	<li><a href="ViewClient.jsp">View</a></li>
+	<li><a href="InsertClient.jsp">Insert</a></li>
+</ul>
+
+<li data-toggle="collapse" data-target="#style" class="collapsed">
+	<a href="#"> Style <span class="arrow"></span></a>
+</li>
+<ul class="sub-menu collapse" id="style">
+	<li><a href="ViewStyle.jsp">View</a></li>
+	<li><a href="InsertStyle.jsp">Insert</a></li>
+</ul>
+
+
+            </ul>
+     </div>
+</div>
+

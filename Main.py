@@ -1,10 +1,11 @@
 import os
 import subprocess
 
-from GenerateModel import GenerateModel
-from GenerateController import GenerateController
-from GenerateUtils import GenerateUtils
-from Database import Database
+from Generator.GenerateModel import GenerateModel
+from Generator.GenerateController import GenerateController
+from Generator.GenerateUtils import GenerateUtils
+from Generator.GenerateSideBar import GenerateSideBar
+from Database.Database import Database
 
 def main():
     host = "localhost"
@@ -28,6 +29,9 @@ def main():
     
     utils_generator = GenerateUtils(host, database, user, password) 
     utils_generator.generate_and_save(f"{database}/Models/Utils")
+
+    side_bar_generator = GenerateSideBar(database_instance=db_instance) 
+    side_bar_generator.generate_and_save_SideBar(f"{database}/Views/Shared")
 
 if __name__ == "__main__":
     main()
