@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using Npgsql;
+using Utils.helper;
+
+namespace {namespace}
+{
+    public class {class}
+    {
+{properties}
+        public {class}()
+        {
+        }
+
+        public {class}({constructor_parameters})
+        {
+{constructor_assignments}
+	}
+	
+	public void Insert(NpgsqlConnection connection){
+            Dictionary<string, object> data = new Dictionary<string, object>
+            {
+{insert_assignments}
+            };
+            DatabaseHelper.Insert(connection, "{class_name}" , data);
+        }
+        
+	public static List<{class}> SelectAll(NpgsqlConnection connection){
+            return DatabaseHelper.Select<{class}>(connection, "{class_name}");
+        }
+
+        public static {class} SelectById(NpgsqlConnection connection, string {PK})
+        {
+            Dictionary<string, object> data = new Dictionary<string, object>
+            {
+                { "{PK}", {PK} }
+            };
+            List<{class}> result = DatabaseHelper.Select<{class}>(connection, "{class_name}", data);
+            return result.FirstOrDefault();
+        }
+    }
+}
+

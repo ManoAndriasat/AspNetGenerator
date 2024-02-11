@@ -1,0 +1,16 @@
+using Microsoft.AspNetCore.Mvc;
+using Npgsql;
+using Element;
+using System;
+using Utils.helper;
+using System.Collections.Generic;
+
+public class {class}Controller : Controller
+{
+    private readonly NpgsqlConnection connection;
+
+    public {class}Controller()
+    {            
+        connection = new Connection().GetConnection();
+    }
+}

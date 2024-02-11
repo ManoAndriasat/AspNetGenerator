@@ -1,0 +1,57 @@
+using Microsoft.AspNetCore.Mvc;
+using Npgsql;
+using Models;
+using System;
+using Utils.helper;
+using System.Collections.Generic;
+
+public class {class}Controller : Controller
+{
+    private readonly NpgsqlConnection connection;
+
+    public {class}Controller()
+    {
+        connection = new Connection().GetConnection();
+    }
+    
+    public IActionResult Index()
+    {
+        if(HttpContext.Session.GetString("{PK}") == null){
+            ViewBag.List{class} = {class}.SelectAll(connection);
+        }else{
+            String {PK} = HttpContext.Session.GetString("{PK}");
+            ViewBag.List{class} = {class}.SelectById(connection,{PK});
+        }
+    	return View();
+    }
+
+    public IActionResult Change(String {PK})
+    {
+        HttpContext.Session.SetString("{PK}",{PK});
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult InsertForm()
+    {
+    	{fk_select}
+    	return View();
+    }
+    
+    [HttpPost]
+    public IActionResult Insert({insert_parameters})
+    {
+	    try{
+	    	{next_value}
+	    	{class} {class_name} = new {class}({constructor_parameters});
+	    	{class_name}.Insert(connection);
+	    	return RedirectToAction("Index", "{class}");
+	    }catch (Exception ex){
+	    	
+	    }
+    }
+    
+    public IActionResult Delete()
+    {
+    
+    }
+}
